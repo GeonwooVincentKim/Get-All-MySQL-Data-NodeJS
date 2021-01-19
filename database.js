@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-var con = mysql.createConnection({
+var conn = mysql.createConnnection({
     host: "localhost",
     port: "3306",
     user: "root",
@@ -7,27 +7,33 @@ var con = mysql.createConnection({
     database: "GameDB"
 });
 
-con.connect(function(err){
+print(conn);
+conn.connect(function(err){
     if(err) throw err;
-    console.log("connected");
-    con.query("SELECT * FROM TB_USER", function(err, result, fields){
-        if(err) throw err;
-        console.log(result);
-    });
-    con.query("SELECT * FROM TB_IMAGE", function(err, result, fields){
-        if(err) throw err;
-        console.log(fields);
-        // result.render('TB_IMAGE', {ID: })
-    });
-    con.query("SELECT * FROM TB_GAME", function(err, result, fields){
-        if(err) throw err;
-        console.log(fields);
-    });
-    // var resultArray = err.values(JSON.parse(JSON.stringify(err)));
-    // print(resultArray);
+    console.log("DataBase is connected successfully!!!");
 });
-module.exports = con;
-// con.query(function(err){
+module.exports = conn;
+// conn.connnect(function(err){
 //     if(err) throw err;
-//     console.log("Parsing Data..");
+//     connsole.log("connnected");
+//     conn.query("SELECT * FROM TB_USER", function(err, result, fields){
+//         if(err) throw err;
+//         connsole.log(result);
+//     });
+//     conn.query("SELECT * FROM TB_IMAGE", function(err, result, fields){
+//         if(err) throw err;
+//         connsole.log(fields);
+//         // result.render('TB_IMAGE', {ID: })
+//     });
+//     conn.query("SELECT * FROM TB_GAME", function(err, result, fields){
+//         if(err) throw err;
+//         connsole.log(fields);
+//     });
+//     // var resultArray = err.values(JSON.parse(JSON.stringify(err)));
+//     // print(resultArray);
+// });
+module.exports = conn;
+// conn.query(function(err){
+//     if(err) throw err;
+//     connsole.log("Parsing Data..");
 // });
