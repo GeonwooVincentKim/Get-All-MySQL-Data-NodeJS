@@ -30,6 +30,4 @@ module.exports = con;
 // con.query(function(err){
 //     if(err) throw err;
 //     console.log("Parsing Data..");
-    
 // });
-
