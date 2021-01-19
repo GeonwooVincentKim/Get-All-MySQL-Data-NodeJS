@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-var conn = mysql.createConnnection({
+var conn = mysql.createConnection({
     host: "localhost",
     port: "3306",
     user: "root",
@@ -7,7 +7,7 @@ var conn = mysql.createConnnection({
     database: "GameDB"
 });
 
-print(conn);
+// print(conn);
 conn.connect(function(err){
     if(err) throw err;
     console.log("DataBase is connected successfully!!!");
