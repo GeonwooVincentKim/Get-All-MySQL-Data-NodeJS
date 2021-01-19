@@ -16,7 +16,7 @@ npm install -g mysql
 ### 2. Connects `MySQL` to this `Project`
 
 ```text
-alter USER 'root'@'localhost'`
+ALTER USER 'root'@'localhost'`
 IDENTIFIED WITH mysql_native_password
 BY yourPassword;
 
