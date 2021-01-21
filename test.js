@@ -44,15 +44,3 @@ app.get("/game_list", (req, res) => {
 });
 
 app.listen(3001, (err) => console.log(3001));
-// con.connect(function(err){
-//     if(err) throw err;
-//     console.log("connected");
-//     con.query("SELECT * FROM TB_USER", function(err, result, fields){
-//         if(err) throw err;
-//         console.log(result);
-//     });
-//     con.query("SELECT * FROM TB_IMAGE", function(err, result, fields){
-//         if(err) throw err;
-//         console.log(result);
-//     });
-// })
