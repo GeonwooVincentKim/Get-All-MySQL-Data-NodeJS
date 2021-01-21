@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const conn = require('./database');
 
 var app = express();
 
@@ -37,5 +38,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// app.get("/", (req, res) => {
+//   conn.query("SELECT * FROM ")
+// });
 
 module.exports = app;
