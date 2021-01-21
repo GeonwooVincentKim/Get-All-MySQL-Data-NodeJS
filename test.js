@@ -21,54 +21,22 @@ var get_table_list = function get_list(file_dir, table_name){
     return file_dir, table_name;
 }
 
-get_table_list("user-list", "TB_USER");
+// Get the `User-Data` list from `TB_USER` Table.
+get_table_list("user_list", "TB_USER");
 
-// // Get the `User-Data` list from `TB_USER` Table.
-// app.get("/user-list", (req, res) => {
-//     con.query("SELECT * FROM TB_USER", function(err, result, fields){
-//         console.log(result);
-//         return res.json(result);
-//     });
-// });
+// Get the `Genre-Data` list from `TB_GENRE` Table.
+get_table_list("genre_list", "TB_GENRE");
 
-// // Get the `Genre-Data` list from `TB_GENRE` Table.
-// app.get("/genre_list", (req, res) => {
-//     con.query("SELECT * FROM TB_GENRE", function(err, result, fields){
-//         console.log(result);
-//         return res.json(result);
-//     });
-// });
+// Get the `Image-Data` list from `TB_IMAGR` Table.
+get_table_list("image_list", "TB_IMAGE");
 
-// // Get the `Image-Data` list from `TB_IMAGR` Table.
-// app.get("/image_list", (req, res) => {
-//     con.query("SELECT * FROM TB_IMAGE", function(err, result, fields){
-//         console.log(result);
-//         return res.json(result);
-//     });
-// });
+// Get the `Game-Data` list fromn `TB_GAME` Table.
+get_table_list("game_list", "TB_GAME");
 
-// // Get the `Game-Data` list fromn `TB_GAME` Table.
-// app.get("/game_list", (req, res) => {
-//     con.query("SELECT * FROM TB_GAME", function(err, result, fields){
-//         console.log(result);
-//         return res.json(result);
-//     });
-// });
+// Get the `Platform-List` list from `TB_PLATFORM` Table.
+get_table_list("platform_list", "TB_PLATFORM");
 
-// // Get the `Platform-List` list from `TB_PLATFORM` Table.
-// app.get("/platform_list", (req, res) => {
-//     con.query("SELECT * FROM TB_PLATFORM", function(err, result, fields){
-//         console.log(result);
-//         return res.json(result);
-//     });
-// });
-
-// // Get the `Publisher-List` list from `TB_PUBLISHER` Table
-// app.get("/publisher_list", (req, res) => {
-//     con.query("SELECT * FROM TB_PUBLISHER", function(err, result, fields){
-//         console.log(result);
-//         return res.json(result);
-//     });
-// });
+// Get the `Publisher-List` list from `TB_PUBLISHER` Table
+get_table_list("publisher_list", "TB_PUBLISHER");
 
 app.listen(3001, (err) => console.log(3001));
