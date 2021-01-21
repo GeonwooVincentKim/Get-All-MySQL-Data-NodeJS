@@ -18,6 +18,8 @@ app.get("/", (req, res) => {
         return res.json(result);
     });
 });
+
+app.listen(3001, (err) => console.log(3001));
 // con.connect(function(err){
 //     if(err) throw err;
 //     console.log("connected");
