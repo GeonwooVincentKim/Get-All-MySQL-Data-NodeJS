@@ -4,10 +4,10 @@ var data_base = require("../database");
 
 const app = require("../app");
 const con = require("../database");
-const get_table_list = require("../utils/function");
+// const router = require("../utils/function");
 
 // Get the `User-Data` list from `TB_USER` Tabl
-get_table_list.get_table_list("user_list", "TB_USER");
+router.get_table_list("user_list", "TB_USER");
 
 // // Get the `Genre-Data` list from `TB_GENRE` Table.
 // get_table_list("genre_list", "TB_GENRE");
