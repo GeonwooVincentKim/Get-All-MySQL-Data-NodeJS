@@ -43,4 +43,20 @@ app.get("/game_list", (req, res) => {
     });
 });
 
+// Get the `Platform-List` list from `TB_PLATFORM` Table.
+app.get("/platform_list", (req, res) => {
+    con.query("SELECT * FROM TB_PLATFORM", function(err, result, fields){
+        console.log(result);
+        return res.json(result);
+    });
+});
+
+// Get the `Publisher-List` list from `TB_PUBLISHER` Table
+app.get("/publisher_list", (req, res) => {
+    con.query("SELECT * FROM TB_PUBLISHER", function(err, result, fields){
+        console.log(result);
+        return res.json(result);
+    });
+});
+
 app.listen(3001, (err) => console.log(3001));
